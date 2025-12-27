@@ -31,7 +31,12 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] **I. Simplicity and Focus**: Does the feature align with the core purpose of the application?
+- [ ] **II. Test-Driven Development (TDD)**: Are tests planned for the new feature?
+- [ ] **III. Cross-Platform Compatibility**: Will the feature work on all supported platforms?
+- [ ] **IV. Clear and Usable CLI**: Is the CLI for the feature well-designed and documented?
+- [ ] **V. Secure and Private**: Have security and privacy implications been considered?
+- [ ] **VI. Extensibility**: Is the feature designed to be extensible?
 
 ## Project Structure
 

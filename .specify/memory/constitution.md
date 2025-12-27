@@ -1,55 +1,72 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!--
+Sync Impact Report:
+- Version change: 0.0.0 → 1.0.0
+- List of modified principles:
+  - [PRINCIPLE_1_NAME] → I. Simplicity and Focus
+  - [PRINCIPLE_2_NAME] → II. Test-Driven Development (TDD)
+  - [PRINCIPLE_3_NAME] → III. Cross-Platform Compatibility
+  - [PRINCIPLE_4_NAME] → IV. Clear and Usable CLI
+  - [PRINCIPLE_5_NAME] → V. Secure and Private
+  - [PRINCIPLE_6_NAME] → VI. Extensibility
+- Added sections:
+  - Development Workflow
+  - Security
+- Removed sections: None
+- Templates requiring updates:
+  - ✅ .specify/templates/plan-template.md
+  - ✅ .specify/templates/spec-template.md
+  - ✅ .specify/templates/tasks-template.md
+- Follow-up TODOs: None
+-->
+# TodoConsole Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### I. Simplicity and Focus
+The application should do one thing and do it well: manage a to-do list.
+The user interface should be clean, intuitive, and keyboard-driven.
+Avoid feature bloat. New features must be carefully considered and align with the core purpose.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### II. Test-Driven Development (TDD)
+All new features and bug fixes must be accompanied by tests.
+Follow the Red-Green-Refactor cycle.
+Strive for high test coverage.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### III. Cross-Platform Compatibility
+The application must run on Windows, macOS, and Linux.
+Use cross-platform libraries and avoid platform-specific APIs where possible.
+Provide clear instructions for installation on each platform.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### IV. Clear and Usable CLI
+The CLI commands and options should be well-documented and easy to understand.
+Provide helpful error messages and suggestions.
+Support both human-readable and machine-readable (e.g., JSON) output formats.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### V. Secure and Private
+User data should be stored securely.
+The application should not collect or transmit any personal information without user consent.
+Dependencies should be regularly audited for security vulnerabilities.
 
-### [PRINCIPLE_6_NAME]
+### VI. Extensibility
+The application should be designed to be extensible with plugins or extensions.
+Provide clear documentation on how to create and use extensions.
 
+## Development Workflow
 
-[PRINCIPLE__DESCRIPTION]
+All code changes must be submitted as pull requests and reviewed by at least one other person.
+Code must adhere to the established coding style and pass all automated checks (linting, tests).
+The main branch should always be in a deployable state.
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+## Security
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
-
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
-
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+All dependencies must be approved and tracked.
+Regular security scans should be performed on the codebase.
+Sensitive data should not be logged or stored in version control.
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution supersedes all other practices and ad-hoc decisions.
+Amendments to this constitution require a documented proposal, review, and approval from the project maintainers. A migration plan must be provided if the changes are significant.
+All pull requests and code reviews must verify compliance with this constitution. Complexity must be justified.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-27 | **Last Amended**: 2025-12-27
