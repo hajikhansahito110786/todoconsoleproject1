@@ -62,12 +62,29 @@ def complete_task(tasks, task_index):
     except ValueError:
         print("Invalid input. Please enter the task number.")
 
+def update_task(tasks, task_index, new_description):
+    """Updates an existing task."""
+    try:
+        index = int(task_index) - 1
+        if 0 <= index < len(tasks):
+            if new_description:
+                tasks[index]['description'] = new_description
+                save_tasks(tasks)
+                print(f"Updated task {task_index} to: '{new_description}'")
+            else:
+                print("New description cannot be empty.")
+        else:
+            print("Invalid task number.")
+    except ValueError:
+        print("Invalid input. Please enter the task number.")
+
 def print_help():
     """Prints the help menu."""
     print("\nAvailable commands:")
     print("  add <description>  - Add a new task")
     print("  list               - List all tasks")
     print("  complete <number>  - Mark a task as complete")
+    print("  update <number> <new_description> - Update a task's description")
     print("  help               - Show this help message")
     print("  exit               - Exit the application")
     print()
@@ -93,6 +110,13 @@ def main():
             list_tasks(tasks)
         elif command == 'complete':
             complete_task(tasks, arg)
+        elif command == 'update':
+            update_args = arg.split(maxsplit=1)
+            if len(update_args) == 2:
+                task_index, new_description = update_args
+                update_task(tasks, task_index, new_description)
+            else:
+                print("Usage: update <number> <new_description>")
         elif command == 'help':
             print_help()
         elif command == 'exit':

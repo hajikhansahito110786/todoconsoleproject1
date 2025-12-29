@@ -1,6 +1,10 @@
 [
     {
         "description": "welcome",
+        "completed": true
+    },
+    {
+        "description": "todo1",
         "completed": false
     }
 ]
